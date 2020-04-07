@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::any('car/', 'CarController@index');
+Route::any('car/place', 'CarController@place');
+Route::any('car/move', 'CarController@move');
+Route::any('car/left', 'CarController@left');
+Route::any('car/right', 'CarController@right');
