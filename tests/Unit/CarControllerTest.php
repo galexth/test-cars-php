@@ -19,7 +19,7 @@ class CarControllerTest extends TestCase
     {
         $position = $this->getInitialPosition();
 
-        $response = $this->put('/car/place', $position);
+        $response = $this->post('/car/place', $position);
 
         $response->assertStatus(200);
         $response->assertJson($position);
@@ -35,7 +35,7 @@ class CarControllerTest extends TestCase
         $position = $this->getInitialPosition();
         $position['x'] = 10;
 
-        $response = $this->put('/car/place', $position);
+        $response = $this->post('/car/place', $position);
 
         $response->assertStatus(422);
     }
