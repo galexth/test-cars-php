@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::any('car/', 'CarController@index');
-Route::any('car/place', 'CarController@place');
-Route::any('car/move', 'CarController@move');
-Route::any('car/left', 'CarController@left');
-Route::any('car/right', 'CarController@right');
+Route::get('car/', 'CarController@init');
+Route::post('car/place', 'CarController@place');
+Route::delete('car', 'CarController@reset');
+Route::put('car/move', 'CarController@move');
+Route::put('car/left', 'CarController@left');
+Route::put('car/right', 'CarController@right');

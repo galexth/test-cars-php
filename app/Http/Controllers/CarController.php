@@ -10,13 +10,19 @@ use Illuminate\Validation\Rule;
 class CarController extends Controller
 {
     /**
-     * @param \Illuminate\Http\Request $request
-     *
      * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function init()
     {
         return response(\Session::get('position'));
+    }
+
+    /**
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     */
+    public function reset()
+    {
+        return response(\Session::flush());
     }
 
     /**
