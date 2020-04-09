@@ -1,11 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "galexth/cars-php",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": [
-        "framework",
-        "laravel"
-    ],
+    "description": "Cars test.",
     "license": "MIT",
     "require": {
         "php": "^7.2.5",
