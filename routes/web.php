@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'HomeController@index');
+
 Route::get('car/', 'CarController@init');
 Route::post('car/place', 'CarController@place');
 Route::delete('car', 'CarController@reset');
